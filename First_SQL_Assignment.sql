@@ -29,3 +29,10 @@ create table Payment (payment_id int primary key,
 					 foreign key (order_id) references Orders(order_id));
 					 
 select * from payment;
+
+CREATE TABLE credit_card(
+Card_number int Primary key,
+Customer_id int NOT NULL,
+card_expiry_date DATE NOT NULL,
+bank_name VARCHAR (20) NOT NULL,
+FOREIGN KEY (Customer_id) references customers(Customer_id));
